@@ -1,0 +1,40 @@
+<html>
+    <head>
+=
+        <h1>This is my css styling page.</h1>
+    </head>
+ 
+        <script>
+            function clickBox() {
+                const input = document.getElementById("folly")
+                var splitting = input.split(",")
+                document.getElementById("what").style.color = "rgb("+splitting[0]+","+splitting[1]+","+splitting[2]+")"
+    
+                }
+        </script>
+  
+    <body>
+        <input type = "text" id = "folly" value = "">
+        
+    <p id = "what">
+        
+        Be not afeard; the isle is full of noises,<br>
+Sounds and sweet airs, that give delight, and hurt not.<br>
+Sometimes a thousand twangling instruments<br>
+Will hum about mine ears; and sometime voices,<br>
+That, if I then had waked after long sleep,<br>
+Will make me sleep again: and then, in dreaming,<br>
+The clouds methought would open, and show riches<br>
+Ready to drop upon me; that, when I waked,<br>
+I cried to dream again.<br>
+
+<br>Format answer as x,y,z
+        
+    </p>
+
+    <button onclick = "clickBox()">
+        Enter an rgb color code!
+    </button>
+
+    </body>
+</html>
