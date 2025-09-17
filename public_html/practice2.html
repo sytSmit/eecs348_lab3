@@ -1,40 +1,56 @@
 <html>
-    <head>
-=
-        <h1>This is my css styling page.</h1>
-    </head>
- 
+<head> 
+    <title>This is my css styling page!</title>
+</head>
+
+
+<body>
+        
+        <div id= "paragraph"> Be not afeard; the isle is full of noises,<br>
+        Sounds and sweet airs, that give delight, and hurt not.<br>
+        Sometimes a thousand twangling instruments<br>
+        Will hum about mine ears; and sometime voices,<br>
+        That, if I then had waked after long sleep,<br>
+        Will make me sleep again: and then, in dreaming,<br>
+        The clouds methought would open, and show riches<br>
+        Ready to drop upon me; that, when I waked,<br>
+        I cried to dream again.<br>
+        -Shakespeare, The Tempest<br> </div>
+
+        Border R(0-255): <input type="text" id="border_R" value=""><br>
+        Border G(0-255): <input type="text" id="border_G" value=""><br>
+        Border B(0-255): <input type="text" id="border_B" value=""><br>
+
+        Border Width: <input type="text" id="border_width" value=""><br>
+
+        Background R(0-255): <input type="text" id="bg_R" value=""><br>
+        Background G(0-255): <input type="text" id="bg_G" value=""><br>
+        Background B(0-255): <input type="text" id="bg_B" value=""><br>
+
+        <button onclick="alert_paragraph_color()">Change the color</button><br>
+
         <script>
-            function clickBox() {
-                const input = document.getElementById("folly")
-                var splitting = input.split(",")
-                document.getElementById("what").style.color = "rgb("+splitting[0]+","+splitting[1]+","+splitting[2]+")"
-    
-                }
+            function alert_paragraph_color() {
+                var border_R = document.getElementById("border_R").value;
+                var border_G = document.getElementById("border_G").value;
+                var border_B = document.getElementById("border_B").value;
+
+                var border_width = document.getElementById("border_width").value;
+                
+                var bg_R = document.getElementById("bg_R").value;
+                var bg_G = document.getElementById("bg_G").value;
+                var bg_B = document.getElementById("bg_B").value;
+                
+                var tag = document.getElementById("paragraph");
+
+                tag.style.borderColor = `rgb(${border_R}, ${border_G}, ${border_B})`;
+                tag.style.borderWidth = border_width + "px";
+                tag.style.borderStyle = "solid";
+                tag.style.backgroundColor = `rgb(${bg_R}, ${bg_G}, ${bg_B})`;
+        
+            }
         </script>
-  
-    <body>
-        <input type = "text" id = "folly" value = "">
-        
-    <p id = "what">
-        
-        Be not afeard; the isle is full of noises,<br>
-Sounds and sweet airs, that give delight, and hurt not.<br>
-Sometimes a thousand twangling instruments<br>
-Will hum about mine ears; and sometime voices,<br>
-That, if I then had waked after long sleep,<br>
-Will make me sleep again: and then, in dreaming,<br>
-The clouds methought would open, and show riches<br>
-Ready to drop upon me; that, when I waked,<br>
-I cried to dream again.<br>
 
-<br>Format answer as x,y,z
-        
-    </p>
+</body>
 
-    <button onclick = "clickBox()">
-        Enter an rgb color code!
-    </button>
-
-    </body>
 </html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>This is a password verification page!</title>
+        <script>
+            function verifyPassword() {
+                const pw1 = document.getElementById("password1").value;
+                const pw2 = document.getElementById("password2").value;
+
+                if (pw1.length < 8) {
+                    alert("password must be at least 8 characters long.");
+                } else if (pw1 !== pw2) {
+                    alert("passwords do not match.");
+                } else {
+                    alert("passwords are correct and match.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Password verification</h2>
+        <label for="password1">Enter password:</label><br>
+        <input type="text" id="password1"><br>
+        <br>
+        <label for="password2">Re-enter password:</label><br>
+        <input type="text" id="password2"><br>
+        <br>
+
+        <button onclick="verifyPassword()">Enter!</button>
+    </body>
+</html>
